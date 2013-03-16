@@ -1,0 +1,32 @@
+// See: http://jshint.com/docs/
+{
+    "bitwise": true,
+    "camelcase": false,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "indent": 2,
+    "latedef": true,
+    "laxcomma": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "plusplus": false,
+    "quotmark": true,
+    "regexp": true,
+    //"undef": true,
+    //"unused": true,
+    //"strict": true,
+    "trailing": true,
+    "maxparams": false,
+    "maxdepth": false,
+    "maxstatements": 40,
+    "maxcomplexity": 5,
+    // Environments
+    "browser": true,
+    "devel": true,
+    "jquery": true,
+    "nonstandard": true
+}

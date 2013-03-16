@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>bTask Tests</title>
+  <link rel="stylesheet" href="/node_modules/mocha/mocha.css" />
+  <style>
+.toast-message, #main { display: none }
+  </style>
+</head>
+<body>
+  <div id="todo-app"></div>
+  <div id="mocha"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="/node_modules/chai/chai.js"></script>
+  <script src="/node_modules/mocha/mocha.js"></script>
+  <script src="/js/lib/require.js"></script>
+  <script src="lib/sinon-1.6.0.js"></script>
+  <script src="fixtures/gapi.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="setup.js"></script>
+  <script src="app.test.js"></script>
+  <script src="lists.test.js"></script>
+  <script>
+    // Only run the tests when the application is ready
+    require(['app'], function() {
+      bTask.apiManager.on('ready', function() { mocha.run(); });
+    });
+  </script></body>
+</html>

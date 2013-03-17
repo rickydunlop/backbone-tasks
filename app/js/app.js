@@ -31,7 +31,7 @@ function(ApiManager, Routes, AppView, AuthView, ListMenuView, TaskLists, Tasks) 
       this.apiManager.on('ready', function() {
         self.collections.lists.fetch({ data: { userId: '@me' }, success: function(collection, res, req) {
           self.views.listMenu.render();
-          Backbone.history.start();
+          Backbone.history.start({ pushState: true });
         }});
       });
     }

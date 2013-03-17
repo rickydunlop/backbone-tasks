@@ -33,13 +33,13 @@ function(template, TaskEditView) {
       if (this.parentView.activeTaskView) {
         this.parentView.activeTaskView.close();
       }
-      this.$el.addClass('active');
+      this.$el.addClass('task-active');
       this.parentView.activeTaskView = this;
       this.parentView.editTask(this.model);
     },
 
     close: function(e) {
-      this.$el.removeClass('active');
+      this.$el.removeClass('task-active');
     },
 
     toggle: function() {

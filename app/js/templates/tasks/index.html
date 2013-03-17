@@ -1,8 +1,16 @@
 <div class="span6">
   <div id="add-task">
-    <form class="well row form-inline add-task">
-      <input type="text" class="pull-left" placeholder="Enter a new task's title and press return" name="title">
-      <button type="submit" class="pull-right btn"><i class="icon-plus"></i></button>
+    <form class="add-task">
+      <div class="row-fluid">
+        <div class="span10">
+          <div class="control-group">
+            <input type="text" class="input-block-level" placeholder="Add a new task" name="title" />
+          </div>
+        </div>
+        <div class="span2">
+          <button type="submit" class="btn"><i class="icon-plus"></i></button>
+        </div>
+      </div>
     </form>
   </div>
   <ul id="task-list"></ul>

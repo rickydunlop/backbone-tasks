@@ -47,7 +47,7 @@ function(template, TaskEditView) {
         , $el = this.$el.find('.check-task')
         ;
 
-      this.model.set('status', $el.attr('checked') ? 'completed' : 'needsAction');
+      this.model.set('status', $el.prop('checked') ? 'completed' : 'needsAction');
       if (this.model.get('status') === 'needsAction') {
         this.model.set('completed', null);
       }

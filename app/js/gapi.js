@@ -83,7 +83,7 @@ define(['config'], function(config) {
   };
 
   Backbone.sync = function(method, model, options) {
-    var requestContent = {};
+    var requestContent = {}, request;
     options || (options = {});
 
     switch (model.url) {
@@ -117,7 +117,7 @@ define(['config'], function(config) {
       break;
 
       case 'read':
-        var request = gapi.client.tasks[model.url].list(options.data);
+        request = gapi.client.tasks[model.url].list(options.data);
         Backbone.gapiRequest(request, method, model, options);
       break;
     }

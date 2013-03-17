@@ -36,7 +36,12 @@ define(['text!templates/tasks/edit.html'], function(template) {
         }
       }
 
-      this.model.save();
+      this.model.save(null, {
+        success: function() {
+          // TODO: Show feedback
+        }
+      });
+
       return false;
     },
 
@@ -49,7 +54,6 @@ define(['text!templates/tasks/edit.html'], function(template) {
       this.model.destroy();
       return false;
     }
-
   });
 
   return TaskEditView;

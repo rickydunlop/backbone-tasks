@@ -10,7 +10,7 @@ suite('Tasks', function() {
     ;
 
   setup(function() {
-    $el = bTask.views.app.$el;
+    $el = tasks.views.app.$el;
     $listItem = $el.find('li.task:first');
     $form = $el.find('form');
     $listItem.click();

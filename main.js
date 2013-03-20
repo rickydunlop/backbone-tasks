@@ -1,15 +1,15 @@
 rejs.config({
     baseUrl: 'js',
-  
+
     paths: {
     },
-      
+
     shim: {
     }
 });
-          
-require(['app'],      
-    
+
+require(['app'],
+
 function(App) {
-    window.bTask = new App();
+    window.tasks = new App();
 });e

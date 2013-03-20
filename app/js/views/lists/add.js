@@ -11,7 +11,7 @@ var AddListView = EditListView.extend({
 
     this.model.save({ title: title }, { success: function(model) {
       // Add the updated model to the collection
-      bTask.collections.lists.add(model);
+      tasks.collections.lists.add(model);
       self.remove();
     }});
 

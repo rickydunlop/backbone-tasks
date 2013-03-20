@@ -29,16 +29,16 @@ function(template, AddListView, EditListView) {
     },
 
     addList: function() {
-      return this.listForm(new AddListView({ model: new bTask.collections.lists.model({ title: '' }) }));
+      return this.listForm(new AddListView({ model: new tasks.collections.lists.model({ title: '' }) }));
     },
 
     editList: function() {
-      return this.listForm(new EditListView({ model: bTask.views.activeListMenuItem.model }));
+      return this.listForm(new EditListView({ model: tasks.views.activeListMenuItem.model }));
     },
 
     deleteList: function() {
       if (confirm('Are you sure you want to delete that list?')) {
-        bTask.views.activeListMenuItem.model.destroy();
+        tasks.views.activeListMenuItem.model.destroy();
       }
       return false;
     },

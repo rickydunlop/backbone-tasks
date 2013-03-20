@@ -28,26 +28,26 @@ function(template, TasksIndexView, Tasks) {
     },
 
     open: function() {
-      if (bTask.views.activeListMenuItem) {
-        bTask.views.activeListMenuItem.$el.removeClass('active');
+      if (tasks.views.activeListMenuItem) {
+        tasks.views.activeListMenuItem.$el.removeClass('active');
       }
 
-      bTask.views.activeListMenuItem = this;
+      tasks.views.activeListMenuItem = this;
       this.$el.addClass('active');
 
       // Render the tasks
-      if (bTask.views.tasksIndexView) {
-        bTask.views.tasksIndexView.remove();
+      if (tasks.views.tasksIndexView) {
+        tasks.views.tasksIndexView.remove();
       }
 
-      bTask.views.tasksIndexView = new TasksIndexView({
+      tasks.views.tasksIndexView = new TasksIndexView({
         collection: new Tasks({
           tasklist: this.model.get('id')
         }),
         model: this.model
       });
-      bTask.views.app.$el.find('#tasks-container').html(bTask.views.tasksIndexView.render().el);
-      bTask.routes.navigate('lists/' + this.model.get('id'));
+      tasks.views.app.$el.find('#tasks-container').html(tasks.views.tasksIndexView.render().el);
+      tasks.routes.navigate('lists/' + this.model.get('id'));
 
       return false;
     }

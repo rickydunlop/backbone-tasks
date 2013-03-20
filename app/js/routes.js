@@ -8,8 +8,8 @@ define(function() {
     },
 
     openList: function(id) {
-      if (bTask.collections.lists && bTask.collections.lists.length) {
-        var list = bTask.collections.lists.get(id);
+      if (tasks.collections.lists && tasks.collections.lists.length) {
+        var list = tasks.collections.lists.get(id);
         if (list) {
           list.trigger('select');
         } else {

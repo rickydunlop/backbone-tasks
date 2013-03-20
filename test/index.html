@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>bTask Tests</title>
+  <title>Tasks Tests</title>
   <link rel="stylesheet" href="/node_modules/mocha/mocha.css" />
   <style>
   .toast-message, #main { display: none }
@@ -26,7 +26,7 @@
   <script>
     // Only run the tests when the application is ready
     require(['app'], function() {
-      bTask.apiManager.on('ready', function() { mocha.run(); });
+      tasks.apiManager.on('ready', function() { mocha.run(); });
     });
   </script></body>
 </html>

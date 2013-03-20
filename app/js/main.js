@@ -24,5 +24,5 @@ require([
 ],
 
 function(App) {
-  window.bTask = new App();
+  window.tasks = new App();
 });

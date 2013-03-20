@@ -10,7 +10,7 @@ suite('Lists', function() {
   });
 
   test('Creating a list', function() {
-    var $el = bTask.views.app.$el
+    var $el = tasks.views.app.$el
       , listName = 'Example list';
 
     // Show the add list form
@@ -28,7 +28,7 @@ suite('Lists', function() {
   });
 
   test('Editing a list', function() {
-    var $el = bTask.views.app.$el;
+    var $el = tasks.views.app.$el;
 
     // Show the edit list form
     $el.find('.list-menu-item:first').click();
@@ -42,7 +42,7 @@ suite('Lists', function() {
   });
 
   test('Deleting a list', function() {
-    var $el = bTask.views.app.$el;
+    var $el = tasks.views.app.$el;
 
     // Automatically accept the confirmation
     window.confirm = function() { return true; };

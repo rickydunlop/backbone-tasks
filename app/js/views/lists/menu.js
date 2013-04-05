@@ -28,10 +28,6 @@ define(['views/lists/menuitem'], function(ListMenuItemView) {
       var $el = $(this.el),
           self = this;
 
-      this.collection.each(function(list) {
-        self.renderMenuItem(list);
-      });
-
       return this;
     }
   });

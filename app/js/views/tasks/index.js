@@ -45,6 +45,11 @@ function(template, TaskView, TaskEditView, Tasks) {
     },
 
     renderTask: function(task, list, options) {
+      if (!task.get('id')) {
+        // Ignore unsaved tasks
+        return;
+      }
+
       var item = new TaskView({ model: task, parentView: this }),
           $el = this.$el.find('#task-list');
       if (options && options.at === 0) {

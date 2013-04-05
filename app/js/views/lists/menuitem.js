@@ -40,12 +40,9 @@ function(template, TasksIndexView, Tasks) {
         tasks.views.tasksIndexView.remove();
       }
 
-      tasks.views.tasksIndexView = new TasksIndexView({
-        collection: new Tasks({
-          tasklist: this.model.get('id')
-        }),
-        model: this.model
-      });
+      var taskList = new Tasks({ tasklist: this.model.get('id') });
+      tasks.collections.tasks = taskList;
+      tasks.views.tasksIndexView = new TasksIndexView({ collection: taskList, model: this.model });
       tasks.views.app.$el.find('#tasks-container').html(tasks.views.tasksIndexView.render().el);
       tasks.routes.navigate('lists/' + this.model.get('id'));
 

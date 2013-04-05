@@ -1,8 +1,8 @@
 define([], function() {
   var config = {};
-  config.apiKey = app.settings.API_KEY;
+  config.apiKey = 'AIzaSyBQEDfA48z3kA7YXN0-GBruziPirM-xNKg';
   config.scopes = 'https://www.googleapis.com/auth/tasks https://www.googleapis.com/auth/userinfo.profile';
-  config.clientId = app.settings.CLIENT_ID;
+  config.clientId = '171935667679.apps.googleusercontent.com';
 
   _.templateSettings = {
     interpolate: /\{\{(.+?)\}\}/g

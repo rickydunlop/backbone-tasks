@@ -134,7 +134,7 @@ define(['config'], function(config) {
         } else {
           result = res;
         }
-        options.success(model, result, request);
+        options.success(result);
       }
     });
   };

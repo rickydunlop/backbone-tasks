@@ -61,7 +61,7 @@ function(template, TaskView, TaskEditView, Tasks) {
       var $el = this.$el.find('#task-list'),
           self = this;
 
-      this.collection.fetch({ data: { tasklist: this.model.get('id') }, success: function() {
+      this.collection.fetch({ reset: true, data: { tasklist: this.model.get('id') }, success: function() {
         self.collection.each(function(task) {
           task.set('tasklist', self.model.get('id'));
           self.renderTask(task);

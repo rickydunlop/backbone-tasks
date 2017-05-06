@@ -4,14 +4,14 @@
   "private": true,
   "dependencies": {
     "requirejs": "latest",
-    "connect": "2.7.0"
+    "connect": "3.6.1"
   },
   "devDependencies": {
     "mocha": "latest",
     "chai": "latest",
-    "grunt": "0.4.x",
-    "grunt-exec": "0.4.x",
-    "grunt-cli": "0.1.x"
+    "grunt": "~1.0.1",
+    "grunt-exec": "~2.0.0",
+    "grunt-cli": "~1.2.0"
   },
   "scripts": {
     "grunt": "node_modules/.bin/grunt"
